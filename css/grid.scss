@@ -1,0 +1,46 @@
+.grid-50-50 {
+  display: grid;
+  grid-template-columns: [first] 50% [second] 50% [end];
+  grid-template-rows: [header] 25% [space] 50px [content] auto [endcontent] 50px [last-line];
+}
+
+.grid-60-40 {
+  display: grid;
+  grid-template-columns: [first] 60% [second] 40% [end];
+  grid-template-rows: [header] 25% [space] 50px [content] auto [endcontent] 50px [last-line];
+}
+
+.grid-40-60 {
+  display: grid;
+  grid-template-columns: [first] 40% [second] 60% [end];
+  grid-template-rows: [header] 25% [space] 50px [content] auto [endcontent] 50px [last-line];
+}
+
+.grid-hosting {
+  display: grid;
+  grid-template-columns: [first] 50% [second] 50% [end];
+  grid-template-rows: [header] 25% [space] 50px [content] auto [endcontent] 50px [last-line];
+  height: 1500px;
+}
+
+.item-header {
+  grid-column: first / end;
+  grid-row: header / space;
+  margin-top: 100px;
+}
+
+
+.item-left {
+  grid-column: first / second;
+  grid-row: content / endcontent;
+}
+
+.item-right {
+  grid-column: second / end;
+  grid-row: content / endcontent;
+}
+
+.item-main {
+  grid-column: first / end;
+  grid-row: content / endcontent;
+}

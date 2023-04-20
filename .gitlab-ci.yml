@@ -1,0 +1,25 @@
+image: docker:22.06-rc-dind
+
+variables:
+  DOCKER_DRIVER: overlay2
+  DOCKER_TLS_CERTDIR: "/certs"
+
+services:
+  - docker:22.06-rc-dind
+
+stages:
+  - build
+
+build:
+  stage: build
+  script:
+    # login to dowload laravel base image
+    - echo "$CI_REGISTRY_PASSWORD" | docker login --username $CI_REGISTRY_USER --password-stdin "$CI_REGISTRY_IMAGE"
+
+    # build image
+    - docker build . -t app
+    
+    # upload image to testing server with special name
+    - docker tag app "$CI_REGISTRY_IMAGE/app:$CI_PIPELINE_IID"
+    - docker push "$CI_REGISTRY_IMAGE/app:$CI_PIPELINE_IID"
+

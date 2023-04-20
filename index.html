@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--
+  Hi there
+  Just a warning: This code is a mess!
+  This is a presenation, not a business website.
+  The presentation is done "the hacky way" with as little time spent as possible.
+  Feel free to improve, but dont anger about the "coding style" :)
+-->
+
+<head>
+  <meta charset="utf-8" />
+
+  <title>My cool presentation</title>
+
+  <meta name="description" content="A framework for easily creating beautiful presentations using HTML" />
+  <meta name="author" content="" />
+
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="dist/reset.css" />
+  <link rel="stylesheet" href="dist/reveal.css" />
+  <link rel="stylesheet" href="dist/theme/black.css" id="theme" />
+
+  <!-- Theme used for syntax highlighting of code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <div id="navbar">
+    <div id="title" class="blue"><!-- will be replaced by JS titleChanger --></div>
+  </div>
+
+  <div id="bottom-navbar">
+    <a id="footername" href="https://jonasgoebel.net" target="_blank"
+      class="blue"><!-- will be replaced by JS titleChanger --></a>
+  </div>
+  <div class="reveal">
+    <div class="slides">
+      <section class="center" data-background-gradient="linear-gradient(to bottom, #283b95, #17b2c3)" style="text-align: left">
+        <h1>My cool presentation</h1>
+        <h3>My subtitle</h3>
+        <div class="userinfo">
+          <div style="text-align: center left">
+            <i class="fa-solid fa-user fa-xs"></i>
+            <span style="color: #ecf0f1">Jonas Göbel</span>
+          </div>
+          <div style="text-align: center left">
+            <i class="fa-solid fa-calendar fa-xs"></i>
+            <span style="color: #ecf0f1">20.04.2023</span>
+          </div>
+        </div>
+      </section>
+
+      <section data-external-replace="slides/1_agenda.html"></section>
+      <section data-external-replace="slides/2_audience_actions.html"></section>
+      <section data-external-replace="slides/3_slide_types.html"></section>
+      <section data-external-replace="slides/4_function_examples.html"></section>
+
+      <section class="background-opacity center" data-auto-animate>
+
+        <h2>Code highlighting</h2>
+
+        <pre>Filename</pre>
+            <pre style="height: 100%;">
+              <code data-line-numbers="1-16|1-2|3-6|8-16" data-trim>
+              version: '3'
+              services:
+                app:
+                  image: my-cool-app
+                  ports:
+                  - 80:80
+
+                db:
+                  image: mysql:5.7
+                  volumes:
+                  - data:/var/lib/mysql
+                  environment:
+                    MYSQL_DATABASE: ${DB_NAME}
+                    MYSQL_PASSWORD: ${DB_PASSWORD}
+                    MYSQL_ROOT_PASSWORD: ${DB_ROOT_PASSWORD}
+                    MYSQL_USER: ${DB_USER}
+              </code>
+            </pre>
+
+          <aside class="notes" data-markdown>
+            <textarea data-template>
+              Platz für Notizen
+            </textarea>
+          </aside>
+      </section>
+
+      <section data-external-replace="slides/ende_quellen.html"> </section>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/zoom/zoom.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/search/search.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script src="plugin/external/external.js"></script>
+  <script>
+    // Also available as an ES module, see:
+    // https://revealjs.com/initialization/
+    Reveal.initialize({
+      controls: true,
+      progress: true,
+      center: true,
+      hash: true,
+
+      center: false,
+
+      width: 1920,
+      height: 1080,
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [
+        RevealZoom,
+        RevealNotes,
+        RevealSearch,
+        RevealMarkdown,
+        RevealHighlight,
+      ],
+    });
+  </script>
+</body>
+
+</html>

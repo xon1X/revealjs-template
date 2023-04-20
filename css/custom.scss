@@ -1,0 +1,138 @@
+a {
+  text-decoration: none !important;
+}
+
+#navbar {
+  position: absolute;
+  z-index: 1;
+  margin: 20px;
+  font-size: 2em;
+  font-family: var(--r-heading-font);
+}
+
+#bottom-navbar {
+  position: absolute;
+  z-index: 1;
+  bottom: 0px;
+  margin: 20px;
+  font-size: 2em;
+  font-family: var(--r-heading-font);
+}
+
+.container {
+  display: flex;
+}
+.col {
+  flex: 1;
+}
+
+.colspace>.col {
+  margin: 0px 10px;
+}
+
+.colpadding>.col {
+  padding: 10px;
+}
+
+.black {
+  color: #1e272e;
+}
+
+.black>a {
+  color: #1e272e !important;
+}
+
+
+.black-bck {
+  background: #1e272e;
+}
+
+.green {
+  color: #27ae60;
+}
+
+.green-bck {
+  background: #27ae60;
+}
+
+.blue {
+  color: #14a2f0;
+}
+
+.blue-bck {
+  background: #14a2f0;
+}
+
+.round-corners {
+    border-radius: 15px;
+}
+
+.small-text {
+    font-size: small;
+}
+
+.space-top {
+  margin-top: 50px;
+}
+
+ul.li-left>li {
+  margin: 0; padding: 0;
+}
+
+.center {
+  align-self: center;
+}
+
+.left {
+  text-align: left;
+}
+
+.ci-card {
+  align-self: center;
+  border-radius: 15px;
+  min-height: 125px;
+}
+
+.hosting-brandimg {
+  height: 250px;
+  width: 500px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.hosting-brandimg>img {
+  background-color: #ecf0f1;
+  border-radius: 25px;
+  padding: 5px;
+}
+
+// .background-opacity>.slide-background-content {
+  // background-image: url("/img/ncbackgroundnew.png");
+  // opacity: 0.3;
+// }
+
+.userinfo {
+  position: absolute;
+  margin-top: 50px;
+}
+
+.userinfo>div>a {
+  color: #ecf0f1;
+}
+
+.selfhost-image {
+  width: 500px;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 15px;
+}
+
+#sourcesTable {
+  font-size: 30px;
+  float: right;
+  margin-right: 25px;
+}
+
+#sourcesTable>tbody>tr>td {
+  border-bottom: 0px;
+}
